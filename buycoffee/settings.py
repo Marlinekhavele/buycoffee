@@ -129,4 +129,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 
 
 if os.getcwd() == "/app":
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    SECURE_SSL_REDIRECT = True
     DEBUG = False
